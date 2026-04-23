@@ -1,5 +1,5 @@
-## Four In A Row 
+# Four In A Row 
 
-# Startup
+## Startup
 
 $ javac FourInARow.java && java FourInARow
