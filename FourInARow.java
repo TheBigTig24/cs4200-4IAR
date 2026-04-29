@@ -23,15 +23,26 @@ class FourInARow {
     }
 
     private static int[] performMove(int[] board) {
-        List<int[]> possibleMoves = getNextMoves(board);
+        List<int[]> possibleMoves = getNextMoves(board, -1);
+        int bestScore = Integer.MIN_VALUE;
+        int[] bestMove = null;
+        List<int[]> tiedBestMoves = new ArrayList<>();
 
-
+        for (int[] move : possibleMoves) {
+            int score = doMinimax(move, 5, Integer.MIN_VALUE, Integer.MAX_VALUE, false);
+        }
 
         return null;
     }
 
-    private static List<Integer> evaluate(List<int[]> possibleMoves) {
-        List<Integer> evalMoves = new ArrayList<>(Collections.nCopies(possibleMoves.size(), 0));
+    private static int doMinimax(int[] board, int depth, int alpha, int beta, int isMax) {
+        if (depth == 0 || isTerminal(board)) {
+            return evaluate(board);
+        }
+    }
+
+    private static int evaluate(List<int[]> possibleMoves) {
+        int totalScore = 0;
 
         for (int i = 0; i < possibleMoves.size(); i++) {
             int vl = 0, ht = 0;
@@ -42,11 +53,11 @@ class FourInARow {
                     else if (possibleMoves.get(i)[vr] == -1) oCount++;
                 }
 
-                if (xCount == 0 && oCount == 0) evalMoves.set(i, evalMoves.get(i) + ONE);
-                else if (xCount == 1) evalMoves.set(i, evalMoves.get(i) + TWO);
-                else if (xCount == 2) evalMoves.set(i, evalMoves.get(i) + THREE);
-                else if (xCount == 3) evalMoves.set(i, evalMoves.get(i) + FOUR);
-                else if (oCount == 3) evalMoves.set(i, evalMoves.get(i) + N_THREE);
+                if (xCount == 0 && oCount == 0) totalScore += ONE;
+                else if (xCount == 1) totalScore += TWO;
+                else if (xCount == 2) totalScore += THREE;
+                else if (xCount == 3) totalScore += FOUR;
+                else if (oCount == 3) totalScore += N_THREE;
                 
                 if ( (vl + 4) % 8 == 0) vl += 4;
                 else vl++;
@@ -59,31 +70,64 @@ class FourInARow {
                     else if (possibleMoves.get(i)[hb] == -1) oCount++;
                 }
 
-                if (xCount == 0 && oCount == 0) evalMoves.set(i, ONE);
-                else if (xCount == 1) evalMoves.set(i, evalMoves.get(i) + TWO);
-                else if (xCount == 2) evalMoves.set(i, evalMoves.get(i) + THREE);
-                else if (xCount == 3) evalMoves.set(i, evalMoves.get(i) + FOUR);
-                else if (oCount == 3) evalMoves.set(i, evalMoves.get(i) + N_THREE);
+                if (xCount == 0 && oCount == 0) totalScore += ONE;
+                else if (xCount == 1) totalScore += TWO;
+                else if (xCount == 2) totalScore += THREE;
+                else if (xCount == 3) totalScore += FOUR;
+                else if (oCount == 3) totalScore += N_THREE;
                 
                 ht++;
             }
         }
 
-        return evalMoves;
+        return totalScore;
+    }
+
+    private static boolean checkIfWin(int[] board, int player) {
+        for (int r = 0; r < BOARD_WIDTH; r++) {
+            for (int c = 0; c < BOARD_WIDTH; c++) {
+                int idx = r * BOARD_WIDTH + c;
+
+                if (board[idx] != player) continue;
+
+                if (c <= BOARD_WIDTH - WIN_LEN) {
+                    if (board[idx + 1] == player &&
+                        board[idx + 2] == player &&
+                        board[idx + 3] == player
+                    ) {
+                        return true;
+                    }
+                }
+
+                if (r <= BOARD_WIDTH - WIN_LEN) {
+                    if (board[idx + BOARD_WIDTH] == player &&
+                        board[idx + BOARD_WIDTH * 2] == player &&
+                        board[idx + BOARD_WIDTH * 3] == player
+                    ) {
+                        return true;
+                    }
+                }
+
+
+            }
+        }
+        return false;
     }
 
     /**
      * Gets all next possible moves
      * @param board
+     * @param turn
      * @return List<int[]> List of all board positions with possible move
      */
-    private static List<int[]> getNextMoves(int[] board) {
+    private static List<int[]> getNextMoves(int[] board, int turn) {
         List<int[]> moves = new ArrayList<>();
 
         for (int i = 0; i < board.length; i++) {
             if (board[i] == 0) {
                 int[] copy = board.clone();
-                copy[i] = -1;
+                if (turn > 0) copy[i] = 1;
+                else if (turn < 0) copy[i] = -1;
                 moves.add(copy);
             }
         }
