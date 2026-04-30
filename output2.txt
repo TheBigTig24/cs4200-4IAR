@@ -1,0 +1,203 @@
+Enter your name here: 
+bobo
+
+bobo's Turn:
+Enter your move in this format ([a-h][1-8]):
+a1
+X _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+CPU's Turn:
+X _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+bobo's Turn:
+Enter your move in this format ([a-h][1-8]):
+a2
+X X _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+CPU's Turn:
+X X _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+bobo's Turn:
+Enter your move in this format ([a-h][1-8]):
+a3
+X X X _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+CPU's Turn:
+X X X O _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+bobo's Turn:
+Enter your move in this format ([a-h][1-8]):
+c5
+X X X O _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+CPU's Turn:
+X X X O _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+bobo's Turn:
+Enter your move in this format ([a-h][1-8]):
+f5
+X X X O _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+CPU's Turn:
+X X X O _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ O O _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+bobo's Turn:
+Enter your move in this format ([a-h][1-8]):
+c3
+X X X O _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ X _ X _ _ _ 
+_ _ _ O O _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+CPU's Turn:
+X X X O _ _ _ _ 
+_ _ _ _ _ _ _ _ 
+_ _ X O X _ _ _ 
+_ _ _ O O _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+bobo's Turn:
+Enter your move in this format ([a-h][1-8]):
+a8
+X X X O _ _ _ X 
+_ _ _ _ _ _ _ _ 
+_ _ X O X _ _ _ 
+_ _ _ O O _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+CPU's Turn:
+X X X O _ _ _ X 
+_ _ _ _ _ _ _ _ 
+_ _ X O X _ _ _ 
+_ _ O O O _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+bobo's Turn:
+Enter your move in this format ([a-h][1-8]):
+d2
+X X X O _ _ _ X 
+_ _ _ _ _ _ _ _ 
+_ _ X O X _ _ _ 
+_ X O O O _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+CPU's Turn:
+X X X O _ _ _ X 
+_ _ _ _ _ _ _ _ 
+_ _ X O X _ _ _ 
+_ X O O O _ _ _ 
+_ _ _ O O _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+bobo's Turn:
+Enter your move in this format ([a-h][1-8]):
+b4
+X X X O _ _ _ X 
+_ _ _ X _ _ _ _ 
+_ _ X O X _ _ _ 
+_ X O O O _ _ _ 
+_ _ _ O O _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+CPU's Turn:
+X X X O _ _ _ X 
+_ _ _ X _ _ _ _ 
+_ _ X O X _ _ _ 
+_ X O O O O _ _ 
+_ _ _ O O _ _ _ 
+_ _ _ _ X _ _ _ 
+_ _ _ _ O _ _ _ 
+_ _ _ _ _ _ _ _ 
+
+CPU won the game!
+Ending game...

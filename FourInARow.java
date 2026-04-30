@@ -13,6 +13,8 @@ class FourInARow {
     private static final int THREE = 100;
     private static final int TWO = 10;
     private static final int ONE = 1;
+    private static final int N_ONE = 2;
+    private static final int N_TWO = 11;
     private static final int N_THREE = 467;
 
     public static void main(String[] args) {
@@ -38,7 +40,7 @@ class FourInARow {
                 int row = playerMove.charAt(0) - 'a';
                 int col = Character.getNumericValue(playerMove.charAt(1)) - 1;
 
-                board[(col * BOARD_WIDTH) + row] = 1;
+                board[(row * BOARD_WIDTH) + col] = 1;
                 isPlayerTurn = false;
 
                 printBoard(board);
@@ -76,7 +78,7 @@ class FourInARow {
 
     private static int[] performMove(int[] board) {
         long startTime = System.currentTimeMillis();
-        long deadline = startTime + 5000;
+        long deadline = startTime + 10000;
 
         List<int[]> possibleMoves = getNextMoves(board, -1);
         int bestScore = Integer.MAX_VALUE;
@@ -183,6 +185,8 @@ class FourInARow {
             if (x == 1) return ONE;
         } else {
             if (o == 3) return -N_THREE;
+            if (o == 2) return -N_TWO;
+            if (o == 1) return -N_ONE;
         }
 
         return 0;
@@ -266,7 +270,7 @@ class FourInARow {
         int row = move.charAt(0) - 'a';
         int col = Character.getNumericValue(move.charAt(1)) - 1;
 
-        if (board[(col * BOARD_WIDTH) + row] != 0) return false;
+        if (board[(row * BOARD_WIDTH) + col] != 0) return false;
         else return true; 
     }
 
